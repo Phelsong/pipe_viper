@@ -2,7 +2,7 @@
 name = "pipe_viper"
 version = "0.1.0"
 description = "Pwsh utils for python"
-repository = "https://github.com/Phelson/pipe_viper"
+repository = "https://github.com/Phelsong/pipe_viper"
 authors = ["Josh S Wilkinson <JoshsWilkinson@Outlook.com>"]
 license = "MIT"
 readme = "README.md"
