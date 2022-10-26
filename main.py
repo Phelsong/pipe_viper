@@ -7,7 +7,7 @@ def run_pwsh(ps1_file_path):
             ["powershell.exe", ps1_file_path], universal_newlines=True, stdout=PIPE
         )
     except Exception as error:
-        print(error)
+        return error
     finally:
         out, err = sesh.communicate()
         return out, err
@@ -22,7 +22,7 @@ def run_pwsh_cmd(command):
             stdout=PIPE,
         )
     except Exception as error:
-        print(error)
+        return error
     finally:
         out, err = sesh.communicate()
         return out, err
