@@ -1,11 +1,12 @@
 [tool.poetry]
-name = "pipe-viper"
+name = "pipe_viper"
 version = "0.1.0"
 description = "Pwsh utils for python"
+repository = "https://github.com/Phelson/pipe_viper"
 authors = ["Josh S Wilkinson <JoshsWilkinson@Outlook.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "pipe_viper"}]
+packages = [{include = "main.py"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
