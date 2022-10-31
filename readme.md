@@ -10,9 +10,11 @@ I plan to add support for command scripts and other shells, as well as supportin
 
 ## Usage
 
-```from pipe_viper.main import run_pwsh
+```
+from pipe_viper.main import run_pwsh
 
 ps1_path = "some/path/"
-response = run_pwsh(ps1_path)```  
+response = run_pwsh(ps1_path)
+```  
 
-![alt text](./Screenshot 2022-10-31 133704.png)
+![alt image](./Screenshot 2022-10-31 133704.png)
