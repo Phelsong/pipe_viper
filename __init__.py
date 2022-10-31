@@ -1,3 +1,3 @@
 """pipe_viper package"""
 
-import main
+import pipe_viper
