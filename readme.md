@@ -17,4 +17,4 @@ ps1_path = "some/path/"
 response = run_pwsh(ps1_path)
 ```  
 
-![alt image](./Screenshot 2022-10-31 133704.png)
+![image alt example](./Screenshot 2022-10-31_133704.png)
