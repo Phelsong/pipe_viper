@@ -1,4 +1,5 @@
-""" This is deprecated, and has been renamed to pwsh.py"""
+""" This is deprecated, and has been renamed to powershell-core.py and pwsh.py
+Module will get a proper library interface soon."""
 
 from subprocess import PIPE, Popen
 
