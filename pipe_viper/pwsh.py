@@ -1,4 +1,4 @@
-""" This is deprecated, and has been renamed to pwsh.py"""
+""" pwsh pipeline core functions."""
 
 from subprocess import PIPE, Popen
 
