@@ -1,35 +1,29 @@
-""" This is deprecated, and has been renamed to powershell-core.py and pwsh.py
+"""This is deprecated, and has been renamed to powershell-core.py and pwsh.py
 Module will get a proper library interface soon."""
 
-from subprocess import PIPE, Popen
+import os
+import platform
 
 
-def run_pwsh(ps1_file_path):
-    try:
-        sesh = Popen(
-            ["powershell.exe", ps1_file_path], universal_newlines=True, stdout=PIPE
-        )
-    except Exception as error:
-        return error
-    finally:
-        out, err = sesh.communicate()
-        return out, err
+def main():
 
+    cmd_table: dict[str, str] = {}
+    match os.platform():
+        case "win32":
+            from table import win_stdin_cmds
 
-def run_pwsh_cmd(command):
-    try:
-        sesh = Popen(
-            ["powershell.exe", command],
-            universal_newlines=True,
-            stdin=PIPE,
-            stdout=PIPE,
-        )
-    except Exception as error:
-        return error
-    finally:
-        out, err = sesh.communicate()
-        return out, err
+            cmd_table = win_stdin_cmds
+        case "linux":
+            from table import lx_stdin_cmds
+
+            cmd_table = lx_stdin_cmds
+        case "darwin":
+            from table import mac_stdin_cmds
+
+            cmd_table = mac_stdin_cmds
+        case _:
+            print("Unsupported platform")
 
 
 if __name__ == "__main__":
-    run_pwsh()
+    main()
